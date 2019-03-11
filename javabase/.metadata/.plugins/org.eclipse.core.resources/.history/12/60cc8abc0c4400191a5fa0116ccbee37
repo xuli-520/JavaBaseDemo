@@ -1,0 +1,18 @@
+package com.stringtest;
+
+public class StringDemo6 {
+	public static void main(String[] args) {
+		String s="Hello Java";
+		//返回指定字符串中首次出现的索引位置
+		int size=s.indexOf('a');    //size的结果为7
+		System.out.println(size);
+		
+		
+		    String words="today,monday,sunday";
+		    System.out.println("原始字符串是'"+words+"'");
+		    System.out.println("indexOf(\"day\")结果："+words.indexOf("day"));
+		    System.out.println("indexOf(\"day\",5)结果："+words.indexOf("day",5));
+		    System.out.println("indexOf(\"o\")结果："+words.indexOf("o"));
+		    System.out.println("indexOf(\"o\",6)结果："+words.indexOf("o",6));
+	}
+}

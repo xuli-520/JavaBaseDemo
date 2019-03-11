@@ -1,0 +1,12 @@
+package com.stringtest;
+
+public class StringDemo6 {
+	public static void main(String[] args) {
+		String s="Hello Java";
+		//返回指定字符串中首次出现的索引位置
+		int size=s.indexOf('a');    //size的结果为7
+		System.out.println(size);
+	}
+	
+
+}

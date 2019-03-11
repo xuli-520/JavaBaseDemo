@@ -1,0 +1,14 @@
+package com.stringtest;
+
+public class StringDemo3 {
+	public static void main(String[] args) {
+		String str="我爱 Java 编程";
+		
+		System.out.println(java.lang.System.identityHashCode(str));
+		//从下标为3开始截取至字符串结尾
+		String result=str.substring(3);
+		System.out.println(result);    //输出：Java 编程
+		System.out.println(java.lang.System.identityHashCode(result));
+	}
+
+}

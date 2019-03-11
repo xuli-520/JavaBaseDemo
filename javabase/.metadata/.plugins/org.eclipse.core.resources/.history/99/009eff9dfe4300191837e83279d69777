@@ -1,0 +1,66 @@
+package com.stringtest;
+
+public class StringDemo3 {
+	public static void main(String[] args) {
+		String str="我爱 Java 编程";
+		
+		System.out.println(java.lang.System.identityHashCode(str));
+		//从下标为3开始截取至字符串结尾
+		String result=str.substring(3);
+		System.out.println(result);    //输出：Java 编程
+		System.out.println(java.lang.System.identityHashCode(result));
+		
+		System.out.println("==================="); 
+		String day="Today is Monday";    //原始字符串
+	    System.out.println("substring(0)结果："+day.substring(0));
+	    System.out.println("substring(2)结果："+day.substring(2));
+	    System.out.println("substring(10)结果："+day.substring(10));
+	    System.out.println("substring(2,10)结果："+day.substring(2,10));
+	    System.out.println("substring(0,5)结果："+day.substring(0,5));
+	    System.out.println("===================1"); 
+	    
+	    String Colors="Red,Black,White,Yellow,Blue";
+	    String[] arr1=Colors.split(",");    //不限制元素个数
+	    String[] arr2=Colors.split(",",3);    //限制元素个数为3
+	    System.out.println("所有颜色为：");
+	    for(int i=0;i<arr1.length;i++)
+	    {
+	        System.out.println(arr1[i]);
+	    }
+	    System.out.println("前三个颜色为：");
+	    for(int j=0;j<arr2.length;j++)
+	    {
+	        System.out.println(arr2[j]);
+	    }
+	    
+	    
+	    System.out.println("===================2"); 
+	    String[] news=new String[]
+	            {
+	                   "如何快速掌握Java",
+	                   "听老王剖析Java中的运算符",
+	                   "学习Java的十大忠告",
+	                   "你所不知道的java网络编程技巧大全",
+	                   "Java面试题大全",
+	            };    //定义存储新闻标题的数组
+	           String title="************* 新闻列表 *************";
+	           System.out.println(title.substring(10,30));
+	           System.out.println("----------------------------------------------");
+	           /*
+	           *循环遍历数组截取数组元素中的前10个字符作为列表展示
+	           */
+	           for(int i=0;i<news.length;i++)
+	           {
+	               //判断数组元素的长度是否大于10，如果大于，则截取，否则全部显示
+	               if(news[i].length()>10)
+	               {
+	                   System.out.println(news[i].substring(0,10)+"...");
+	               }
+	               else
+	               {
+	                   System.out.println(news[i]);
+	               }
+	           }
+	}
+
+}

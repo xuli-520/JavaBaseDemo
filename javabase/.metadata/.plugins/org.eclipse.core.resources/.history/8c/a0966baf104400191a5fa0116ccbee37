@@ -1,0 +1,61 @@
+package com.stringtest;
+
+public class StringDemo6 {
+	public static void main(String[] args) {
+		String s="Hello Java";
+		//返回指定字符串中首次出现的索引位置
+		int size=s.indexOf('a');    //size的结果为7
+		System.out.println(size);
+
+		    String words="today,monday,sunday";
+		    System.out.println("原始字符串是'"+words+"'");
+		    System.out.println("indexOf(\"day\")结果："+words.indexOf("day")); 
+		    //从索引为5开始匹配，直到命中，索引值为9开始命中day中第一个d
+		    System.out.println("indexOf(\"day\",5)结果："+words.indexOf("day",5));
+		    System.out.println("indexOf(\"o\")结果："+words.indexOf("o"));
+		  //从索引为6开始匹配，直到命中，索引值为7开始命中day中第一个o
+		    System.out.println("indexOf(\"o\",6)结果："+words.indexOf("o",6));
+		    System.out.println("===================================");
+		    //编写一个简单的 Java 程序，演示 lastIndexOf() 方法查找字符串的用法，并输出结果。代码如下
+		    String words1="today,monday,Sunday";
+		    System.out.println("原始字符串是'"+words1+"'");
+		    //从最右边向左边数，命中的索引值为16
+		    System.out.println("lastIndexOf(\"day\")结果："+words1.lastIndexOf("day"));//16
+		    //找到索引值为5的位置，向左数，命中的索引值为2
+		    System.out.println("lastIndexOf(\"day\",5)结果："+words1.lastIndexOf("day",5));//2
+		    System.out.println("lastIndexOf(\"o\")结果："+words1.lastIndexOf("o"));//7
+		   //找到索引值为6的位置，向左数，命中的索引值为1
+		    System.out.println("lastlndexOf(\"o\",6)结果："+words1.lastIndexOf("o",6));//1
+		    
+		    System.out.println("===================================2");
+		    //String 类的 charAt() 方法可以在字符串内根据指定的索引查找字符
+		    
+		    String words3="today,monday,sunday";
+		    System.out.println(words3.charAt(0));    //结果：t
+		    System.out.println(words3.charAt(1));    // 结果：o
+		    System.out.println(words3.charAt(8));    // 结果：n
+		    
+		    System.out.println("===================================3");
+		    //Java批量替换字符串
+		    
+		    //定义原始字符串
+		    String intro="今天时星其天，外面时下雨天。妈米去买菜了，漏网在家写作业。"+"语文作业时”其”写 5 行，数学使第 10 页。";
+		    //将文本中的所有"时"和"使"都替换为"是"
+		    String newStrFirst=intro.replaceAll("[时使]","是");
+		    System.out.println(newStrFirst);
+		    
+		    //将文本中的所有"妈米"改为"妈妈"
+		    String newStrSecond=newStrFirst.replaceAll("妈米","妈妈");
+		    System.out.println(newStrSecond);
+		    
+		    //将文本中的所有"漏网"改为"留我"
+		    String newStrThird=newStrSecond.replaceAll("漏网","留我");
+		    System.out.println(newStrThird);
+		    
+		    //将文本中第一次出现的"其"改为"期"
+		    String newStrFourth=newStrThird.replaceFirst("[其]","期");
+		    //输出最终字符串
+		    System.out.println(newStrFourth);
+		    
+	}
+}

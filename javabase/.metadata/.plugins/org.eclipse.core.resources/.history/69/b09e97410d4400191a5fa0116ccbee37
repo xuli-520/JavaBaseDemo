@@ -1,0 +1,19 @@
+package com.stringtest;
+
+public class StringDemo6 {
+	public static void main(String[] args) {
+		String s="Hello Java";
+		//返回指定字符串中首次出现的索引位置
+		int size=s.indexOf('a');    //size的结果为7
+		System.out.println(size);
+
+		    String words="today,monday,sunday";
+		    System.out.println("原始字符串是'"+words+"'");
+		    System.out.println("indexOf(\"day\")结果："+words.indexOf("day")); 
+		    //从索引为5开始匹配，直到命中，索引值为9开始命中day中第一个d
+		    System.out.println("indexOf(\"day\",5)结果："+words.indexOf("day",5));
+		    System.out.println("indexOf(\"o\")结果："+words.indexOf("o"));
+		  //从索引为6开始匹配，直到命中，索引值为7开始命中day中第一个o
+		    System.out.println("indexOf(\"o\",6)结果："+words.indexOf("o",6));
+	}
+}
